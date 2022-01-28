@@ -11,7 +11,7 @@ import { ContactoComponent } from './Contacto/contacto.component';
 import { ConversorPipe } from './pipes/conversor.pipe';
 import { CochesComponent } from './coches/coches.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { PlntillasComponent } from './plantillas/plantillas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ContactoComponent,
     ConversorPipe,
-    CochesComponent
+    CochesComponent,
+    PlntillasComponent
   ],
   imports: [
     BrowserModule,

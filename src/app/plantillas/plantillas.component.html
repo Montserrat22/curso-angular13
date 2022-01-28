@@ -1,0 +1,30 @@
+<h4>{{titulo}}</h4>
+<!--condiciones del ng template-->
+<div *ngIf="administrador; then Admin else noAdmin"></div>
+
+<!--IF tradicional 
+<div *ngIf="administrador">
+      <strong style="background-color: yellow;">Eres el administrador</strong>
+      -
+      <button (click)="cambiar(false)">cambiar</button>
+</div>-->
+<!--else tredicional
+      <div *ngIf="!administrador">
+      <strong style="background-color: rgb(255, 0, 0); color: white;">No eres el administrador</strong>
+</div>-->
+<!--NG TEMPLATE if-->  
+  
+<ng-template #Admin>
+      <strong style="background-color: yellow;">Eres el administrador</strong>
+      -
+      <button (click)="cambiar(false)">cambiar</button>
+
+</ng-template>
+
+<!--NG TEMPLATE else-->
+
+<ng-template #noAdmin>
+      <strong style="background-color: rgb(255, 0, 0); color: white;">No eres el administrador</strong>
+     -
+      <button (click)="cambiar(true)">cambiar</button>
+</ng-template>
