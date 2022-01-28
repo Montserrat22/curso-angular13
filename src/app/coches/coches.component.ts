@@ -13,6 +13,7 @@ import { PeticionesService } from "../services/peticiones.service";
 export class CochesComponent{
 public coche:Coche;
 public coches:Coche[];
+public articulos:any;
 
 constructor(
       private _perticionesService:PeticionesService
@@ -28,15 +29,22 @@ constructor(
 ngOnInit(){
      this._perticionesService.getArticulos().subscribe(
            result =>{
-console.log(result),
-     },
-     error =>{
-           var errorMessage =<any>error;
-           console.log(errorMessage);
-     })
+                 this.articulos=result;
+
+                 if(this.articulos){
+                       console.log("error en el servidor");
+                 }
+           },
+           error =>{
+                 var errorMessage=<any>error;
+                 console.log(errorMessage);
+           }
+     )
+
+     }
+     onSumit(){
+      this.coches.push(this.coche);
+      this.coche =new Coche("","","");
+ }
 }
-onSumit(){
-     this.coches.push(this.coche);
-     this.coche =new Coche("","","");
-}
-}
+

@@ -14,6 +14,9 @@
       .listado{
             margin: 30px;
       }
+                       
+
+
 </style>
 
 
@@ -55,4 +58,13 @@
             <li *ngFor="let coche of coches"
             >{{coche.nombre}} - {{coche.caballaje}} - {{coche.color}}</li>
       </ul>
+</div>
+
+<div class="listado">
+      <h3>Listado de articulos</h3>
+      <ul *ngIf="articulos">
+            <li *ngFor="let articulo of articulos"
+            >{{articulo.id}} - {{articulo.title}} </li>
+      </ul>
+      <span *ngIf="articulos">Cargando listado ...</span>
 </div>

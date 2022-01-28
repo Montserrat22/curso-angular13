@@ -10,7 +10,7 @@ import { HomeComponent } from './Home/home.component';
 import { ContactoComponent } from './Contacto/contacto.component';
 import { ConversorPipe } from './pipes/conversor.pipe';
 import { CochesComponent } from './coches/coches.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { CochesComponent } from './coches/coches.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     routing
   ],
   providers: [appRoutingProviders],
